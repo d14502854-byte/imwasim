@@ -24,7 +24,7 @@ const SideNav = ({ activeSection, onNavigate }: SideNavProps) => {
       initial={{ opacity: 0, x: 20 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.5, delay: 0.3 }}
-      className="flex flex-col gap-3"
+      className="flex flex-col gap-2.5"
     >
       {navItems.map((item) => {
         const isActive = activeSection === item.id;
@@ -32,14 +32,14 @@ const SideNav = ({ activeSection, onNavigate }: SideNavProps) => {
           <button
             key={item.id}
             onClick={() => onNavigate(item.id)}
-            className={`group relative flex flex-col items-center gap-1 w-16 py-3 rounded-2xl transition-all duration-200 ${
+            className={`group relative flex flex-col items-center gap-0.5 w-14 py-2.5 rounded-xl transition-all duration-200 ${
               isActive
                 ? "bg-primary text-primary-foreground shadow-elevated"
                 : "bg-card text-muted-foreground shadow-card hover:shadow-elevated hover:text-foreground"
             }`}
           >
-            <item.icon className="w-5 h-5" />
-            <span className="text-[10px] font-medium">{item.label}</span>
+            <item.icon className="w-4 h-4" />
+            <span className="text-[9px] font-medium leading-tight">{item.label}</span>
           </button>
         );
       })}

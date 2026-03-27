@@ -34,18 +34,18 @@ const services = [
 
 const About = () => {
   return (
-    <div className="p-8 md:p-12">
+    <div className="p-5 sm:p-8 md:p-10">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <div className="flex items-center gap-4 mb-8">
-          <h2 className="text-3xl font-display font-bold text-foreground">About Me</h2>
+        <div className="flex items-center gap-3 sm:gap-4 mb-6 sm:mb-8">
+          <h2 className="text-2xl sm:text-3xl font-display font-bold text-foreground whitespace-nowrap">About Me</h2>
           <div className="flex-1 h-1 rounded-full bg-primary" />
         </div>
 
-        <div className="space-y-4 mb-10">
+        <div className="space-y-3 sm:space-y-4 mb-8 sm:mb-10">
           <p className="text-muted-foreground leading-relaxed">
             I'm a manager of software engineering with extensive experience in software development, project management, and leading cross-functional teams. Proven track record of delivering complex software solutions for major clients, including healthcare organizations.
           </p>
@@ -57,22 +57,22 @@ const About = () => {
           </p>
         </div>
 
-        <h3 className="text-xl font-display font-bold text-foreground mb-6">What I do!</h3>
+        <h3 className="text-lg sm:text-xl font-display font-bold text-foreground mb-4 sm:mb-6">What I do!</h3>
 
-        <div className="grid sm:grid-cols-2 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
           {services.map((service, i) => (
             <motion.div
               key={service.title}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.1 * i }}
-              className="p-5 rounded-2xl border border-border hover:shadow-card transition-all group"
+              className="p-4 sm:p-5 rounded-2xl border border-border hover:shadow-card transition-all group"
             >
-              <div className={`w-10 h-10 rounded-xl ${service.bgColor} flex items-center justify-center mb-3`}>
-                <service.icon className={`w-5 h-5 ${service.iconColor}`} />
+              <div className={`w-9 h-9 sm:w-10 sm:h-10 rounded-xl ${service.bgColor} flex items-center justify-center mb-2.5 sm:mb-3`}>
+                <service.icon className={`w-4 h-4 sm:w-5 sm:h-5 ${service.iconColor}`} />
               </div>
-              <h4 className="font-display font-semibold text-foreground mb-2">{service.title}</h4>
-              <p className="text-sm text-muted-foreground leading-relaxed">{service.description}</p>
+              <h4 className="font-display font-semibold text-foreground mb-1.5 sm:mb-2 text-sm sm:text-base">{service.title}</h4>
+              <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">{service.description}</p>
             </motion.div>
           ))}
         </div>

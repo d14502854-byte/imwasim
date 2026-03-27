@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Rubik:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=DM+Sans:wght@300;400;500;600;700&display=swap');
 
 @layer base {
   :root {
@@ -44,8 +44,8 @@
     --shadow-elevated: 0 12px 40px -8px hsl(220 25% 18% / 0.12);
     --shadow-profile: 0 8px 30px -6px hsl(220 25% 18% / 0.1);
 
-    --font-display: 'Rubik', sans-serif;
-    --font-body: 'Poppins', sans-serif;
+    --font-display: 'Plus Jakarta Sans', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -63,16 +63,35 @@
     @apply border-border;
   }
 
+  html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
   body {
     @apply text-foreground;
     font-family: var(--font-body);
     scroll-behavior: smooth;
     background: var(--gradient-bg);
     min-height: 100vh;
+    line-height: 1.6;
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+  }
+
+  h1 { font-size: clamp(1.5rem, 4vw, 2.25rem); }
+  h2 { font-size: clamp(1.25rem, 3.5vw, 1.875rem); }
+  h3 { font-size: clamp(1rem, 2.5vw, 1.25rem); }
+
+  p {
+    font-size: clamp(0.875rem, 2vw, 1rem);
+    line-height: 1.7;
   }
 }
 
@@ -99,9 +118,14 @@
   z-index: 0;
 }
 
+/* Safe area for mobile bottom nav */
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 0);
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 5px;
 }
 
 ::-webkit-scrollbar-track {
@@ -109,7 +133,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: hsl(220, 10%, 80%);
+  background: hsl(220, 10%, 82%);
   border-radius: 3px;
 }
 
