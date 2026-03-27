@@ -14,8 +14,17 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ['Space Grotesk', 'sans-serif'],
-        body: ['Inter', 'sans-serif'],
+        display: ['Plus Jakarta Sans', 'sans-serif'],
+        body: ['DM Sans', 'sans-serif'],
+      },
+      fontSize: {
+        'xs': ['0.75rem', { lineHeight: '1.5' }],
+        'sm': ['0.8125rem', { lineHeight: '1.6' }],
+        'base': ['0.9375rem', { lineHeight: '1.7' }],
+        'lg': ['1.0625rem', { lineHeight: '1.6' }],
+        'xl': ['1.25rem', { lineHeight: '1.4' }],
+        '2xl': ['1.5rem', { lineHeight: '1.3' }],
+        '3xl': ['1.875rem', { lineHeight: '1.25' }],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -69,20 +78,12 @@ export default {
       },
       keyframes: {
         "accordion-down": {
-          from: {
-            height: "0",
-          },
-          to: {
-            height: "var(--radix-accordion-content-height)",
-          },
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
-          from: {
-            height: "var(--radix-accordion-content-height)",
-          },
-          to: {
-            height: "0",
-          },
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
         },
       },
       animation: {
