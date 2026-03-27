@@ -1,13 +1,15 @@
 import { motion } from "framer-motion";
-import { User, FileText, Briefcase, GraduationCap, Mail } from "lucide-react";
+import { User, FileText, Briefcase, GraduationCap, Mail, FolderOpen, Newspaper } from "lucide-react";
 
-type Section = "about" | "skills" | "experience" | "education" | "contact";
+type Section = "about" | "skills" | "experience" | "education" | "works" | "blog" | "contact";
 
 const navItems: { id: Section; icon: typeof User; label: string }[] = [
   { id: "about", icon: User, label: "About" },
-  { id: "skills", icon: FileText, label: "Skills" },
+  { id: "skills", icon: FileText, label: "Resume" },
   { id: "experience", icon: Briefcase, label: "Work" },
-  { id: "education", icon: GraduationCap, label: "Education" },
+  { id: "works", icon: FolderOpen, label: "Works" },
+  { id: "blog", icon: Newspaper, label: "Blog" },
+  { id: "education", icon: GraduationCap, label: "Edu" },
   { id: "contact", icon: Mail, label: "Contact" },
 ];
 
