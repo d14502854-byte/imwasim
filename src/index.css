@@ -2,51 +2,50 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Rubik:wght@300;400;500;600;700&display=swap');
 
 @layer base {
   :root {
-    --background: 40 33% 98%;
-    --foreground: 220 25% 10%;
+    --background: 200 30% 96%;
+    --foreground: 220 25% 18%;
 
     --card: 0 0% 100%;
-    --card-foreground: 220 25% 10%;
+    --card-foreground: 220 25% 18%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 25% 10%;
+    --popover-foreground: 220 25% 18%;
 
-    --primary: 168 80% 36%;
+    --primary: 222 80% 56%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 14 100% 63%;
+    --secondary: 340 82% 62%;
     --secondary-foreground: 0 0% 100%;
 
     --muted: 220 14% 96%;
-    --muted-foreground: 220 10% 46%;
+    --muted-foreground: 220 10% 50%;
 
-    --accent: 43 96% 56%;
-    --accent-foreground: 220 25% 10%;
+    --accent: 168 60% 48%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 220 13% 91%;
     --input: 220 13% 91%;
-    --ring: 168 80% 36%;
+    --ring: 222 80% 56%;
 
-    --radius: 0.75rem;
+    --radius: 1rem;
 
-    --gradient-primary: linear-gradient(135deg, hsl(168, 80%, 36%), hsl(190, 80%, 42%));
-    --gradient-hero: linear-gradient(135deg, hsl(168, 80%, 96%), hsl(43, 96%, 95%), hsl(14, 100%, 96%));
-    --gradient-accent: linear-gradient(135deg, hsl(14, 100%, 63%), hsl(43, 96%, 56%));
-    --gradient-card: linear-gradient(145deg, hsl(0, 0%, 100%), hsl(168, 40%, 97%));
+    --gradient-bg: linear-gradient(135deg, hsl(320, 60%, 92%), hsl(200, 60%, 92%), hsl(160, 50%, 90%));
+    --gradient-primary: linear-gradient(135deg, hsl(222, 80%, 56%), hsl(260, 70%, 60%));
+    --gradient-card: linear-gradient(145deg, hsl(0, 0%, 100%), hsl(220, 20%, 98%));
 
-    --shadow-soft: 0 4px 24px -4px hsl(168 80% 36% / 0.12);
-    --shadow-card: 0 8px 32px -8px hsl(220 25% 10% / 0.08);
-    --shadow-elevated: 0 20px 60px -12px hsl(220 25% 10% / 0.15);
+    --shadow-card: 0 4px 20px -4px hsl(220 25% 18% / 0.06);
+    --shadow-elevated: 0 12px 40px -8px hsl(220 25% 18% / 0.12);
+    --shadow-profile: 0 8px 30px -6px hsl(220 25% 18% / 0.1);
 
-    --font-display: 'Space Grotesk', sans-serif;
-    --font-body: 'Inter', sans-serif;
+    --font-display: 'Rubik', sans-serif;
+    --font-body: 'Poppins', sans-serif;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -65,14 +64,57 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply text-foreground;
     font-family: var(--font-body);
     scroll-behavior: smooth;
+    background: var(--gradient-bg);
+    min-height: 100vh;
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
   }
+}
+
+/* Diagonal stripe pattern overlay */
+.bg-pattern {
+  position: relative;
+}
+
+.bg-pattern::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 40px,
+    hsl(160, 50%, 90% / 0.15) 40px,
+    hsl(160, 50%, 90% / 0.15) 42px
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(220, 10%, 80%);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(220, 10%, 65%);
 }
 
 @layer utilities {
@@ -83,38 +125,15 @@
     background-clip: text;
   }
 
-  .text-gradient-accent {
-    background: var(--gradient-accent);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-
-  .bg-gradient-hero {
-    background: var(--gradient-hero);
-  }
-
-  .bg-gradient-primary {
-    background: var(--gradient-primary);
-  }
-
-  .bg-gradient-accent {
-    background: var(--gradient-accent);
-  }
-
-  .bg-gradient-card {
-    background: var(--gradient-card);
-  }
-
-  .shadow-soft {
-    box-shadow: var(--shadow-soft);
-  }
-
   .shadow-card {
     box-shadow: var(--shadow-card);
   }
 
   .shadow-elevated {
     box-shadow: var(--shadow-elevated);
+  }
+
+  .shadow-profile {
+    box-shadow: var(--shadow-profile);
   }
 }

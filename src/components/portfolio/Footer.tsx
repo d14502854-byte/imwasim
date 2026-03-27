@@ -1,10 +1,8 @@
 const Footer = () => (
-  <footer className="py-8 px-6 border-t border-border">
-    <div className="container max-w-6xl mx-auto text-center">
-      <p className="text-sm text-muted-foreground">
-        © {new Date().getFullYear()} Muhammad Wasim Arshad. All rights reserved.
-      </p>
-    </div>
+  <footer className="py-6 px-6 text-center">
+    <p className="text-xs text-muted-foreground">
+      © {new Date().getFullYear()} Muhammad Wasim Arshad. All rights reserved.
+    </p>
   </footer>
 );
 
