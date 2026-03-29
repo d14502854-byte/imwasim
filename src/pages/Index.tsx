@@ -71,7 +71,7 @@ const Index = () => {
           {[
             { id: "about" as Section, label: "About", icon: "👤" },
             { id: "skills" as Section, label: "Skills", icon: "⚡" },
-            { id: "experience" as Section, label: "Work", icon: "💼" },
+            { id: "experience" as Section, label: "Exp", icon: "💼" },
             { id: "works" as Section, label: "Works", icon: "📁" },
             { id: "blog" as Section, label: "Blog", icon: "📝" },
             { id: "contact" as Section, label: "Contact", icon: "✉️" },
