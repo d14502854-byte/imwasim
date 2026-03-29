@@ -24,7 +24,7 @@ const Contact = () => {
               { icon: Mail, label: "Email", value: "chouhdarywasim@gmail.com", href: "mailto:chouhdarywasim@gmail.com", color: "text-secondary", bg: "bg-secondary/10" },
               { icon: Phone, label: "Phone", value: "+92 345 7155505", href: "tel:+923457155505", color: "text-accent", bg: "bg-accent/10" },
               { icon: MapPin, label: "Location", value: "Bahria Town Lahore, Pakistan", color: "text-secondary", bg: "bg-secondary/10" },
-              { icon: Linkedin, label: "LinkedIn", value: "Connect on LinkedIn", href: "https://linkedin.com", color: "text-primary", bg: "bg-primary/10" },
+              { icon: Linkedin, label: "LinkedIn", value: "Connect on LinkedIn", href: "https://www.linkedin.com/in/wasim-arshad-software-architect/", color: "text-primary", bg: "bg-primary/10" },
             ].map((item, i) => (
               <motion.div
                 key={i}
