@@ -80,7 +80,7 @@ const ProfileSidebar = () => {
               ))}
             </div>
             <div className="px-4 pb-4">
-              <a href="#" className="flex items-center justify-center gap-2 w-full py-2.5 rounded-xl bg-primary text-primary-foreground font-semibold text-xs hover:opacity-90 transition-opacity">
+              <a href="/Muhammad_Wasim_Arshad_CV.pdf" download className="flex items-center justify-center gap-2 w-full py-2.5 rounded-xl bg-primary text-primary-foreground font-semibold text-xs hover:opacity-90 transition-opacity">
                 <Download className="w-3.5 h-3.5" />
                 Download CV
               </a>
@@ -135,7 +135,7 @@ const ProfileSidebar = () => {
           ))}
         </div>
         <div className="px-6 pb-6">
-          <a href="#" className="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-primary text-primary-foreground font-semibold text-sm hover:opacity-90 transition-opacity">
+          <a href="/Muhammad_Wasim_Arshad_CV.pdf" download className="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-primary text-primary-foreground font-semibold text-sm hover:opacity-90 transition-opacity">
             <Download className="w-4 h-4" />
             Download CV
           </a>
