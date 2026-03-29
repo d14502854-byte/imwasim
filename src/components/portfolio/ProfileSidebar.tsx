@@ -99,10 +99,10 @@ const ProfileSidebar = () => {
           <span className="mt-1.5 px-4 py-1 rounded-lg bg-muted text-xs font-medium text-muted-foreground">Manager Software Engineering</span>
           <div className="flex items-center gap-3 mt-5">
             {[
-              { icon: Facebook, href: "#", color: "hover:text-primary" },
-              { icon: Twitter, href: "#", color: "hover:text-primary" },
+              { icon: Facebook, href: "https://www.facebook.com/king.chouhdary", color: "hover:text-primary" },
+              { icon: Twitter, href: "https://x.com/chouhdarywasim?s=21", color: "hover:text-primary" },
               { icon: Instagram, href: "#", color: "hover:text-secondary" },
-              { icon: Linkedin, href: "https://linkedin.com", color: "hover:text-primary" },
+              { icon: Linkedin, href: "https://www.linkedin.com/in/wasim-arshad-software-architect/", color: "hover:text-primary" },
             ].map((social, i) => (
               <a key={i} href={social.href} target="_blank" rel="noopener noreferrer"
                 className={`w-9 h-9 rounded-xl bg-muted flex items-center justify-center text-muted-foreground ${social.color} transition-colors`}>
