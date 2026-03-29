@@ -97,6 +97,9 @@ const ProfileSidebar = () => {
           </div>
           <h2 className="text-xl font-display font-bold text-foreground text-center">Wasim Arshad</h2>
           <span className="mt-1.5 px-4 py-1 rounded-lg bg-muted text-xs font-medium text-muted-foreground">Manager Software Engineering</span>
+          <p className="mt-3 text-[10px] leading-relaxed text-muted-foreground text-center px-2">
+            Engineering Manager | Software Architect | SaaS | Scalable Healthcare Solutions | EHR | EMR | System Design, DevOps, Agile Leadership | Angular, React, Ruby on Rails, Node.js, MEAN, MERN, .NET C#, AWS, AZURE
+          </p>
           <div className="flex items-center gap-3 mt-5">
             {[
               { icon: Facebook, href: "https://www.facebook.com/king.chouhdary", color: "hover:text-primary" },
