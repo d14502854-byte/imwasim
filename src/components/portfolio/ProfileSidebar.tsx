@@ -17,12 +17,11 @@ const ProfileSidebar = () => {
         className="lg:hidden flex items-center gap-3 p-3 cursor-pointer"
         onClick={() => setExpanded(!expanded)}
       >
-        <div className="w-12 h-12 rounded-xl overflow-hidden bg-muted flex-shrink-0">
-          <img
-            src="https://imwasim.com/images/320680629_933291484747617_1817599036000689260_n.jpg"
-            alt="Wasim Arshad"
-            className="w-full h-full object-cover"
-          />
+        <div className="relative w-12 h-12 rounded-xl flex-shrink-0 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-[hsl(280,60%,85%)] via-[hsl(300,50%,88%)] to-[hsl(200,60%,90%)]">
+            <div className="absolute inset-0" style={{ backgroundImage: `repeating-linear-gradient(135deg, transparent, transparent 4px, hsla(170,60%,75%,0.35) 4px, hsla(170,60%,75%,0.35) 4.5px)` }} />
+          </div>
+          <img src="https://imwasim.com/images/320680629_933291484747617_1817599036000689260_n.jpg" alt="Wasim Arshad" className="absolute inset-1 w-10 h-10 rounded-lg object-cover" />
         </div>
         <div className="min-w-0 flex-1">
           <h2 className="text-sm font-display font-bold text-foreground">Wasim Arshad</h2>
