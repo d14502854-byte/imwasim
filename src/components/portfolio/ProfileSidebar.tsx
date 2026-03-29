@@ -44,10 +44,10 @@ const ProfileSidebar = () => {
             <div className="px-4 pb-3 flex flex-col items-center">
               <div className="flex items-center gap-2.5 mt-2">
                 {[
-                  { icon: Facebook, href: "#", color: "hover:text-primary" },
-                  { icon: Twitter, href: "#", color: "hover:text-primary" },
+                  { icon: Facebook, href: "https://www.facebook.com/king.chouhdary", color: "hover:text-primary" },
+                  { icon: Twitter, href: "https://x.com/chouhdarywasim?s=21", color: "hover:text-primary" },
                   { icon: Instagram, href: "#", color: "hover:text-secondary" },
-                  { icon: Linkedin, href: "https://linkedin.com", color: "hover:text-primary" },
+                  { icon: Linkedin, href: "https://www.linkedin.com/in/wasim-arshad-software-architect/", color: "hover:text-primary" },
                 ].map((social, i) => (
                   <a key={i} href={social.href} target="_blank" rel="noopener noreferrer"
                     className={`w-8 h-8 rounded-xl bg-muted flex items-center justify-center text-muted-foreground ${social.color} transition-colors`}>
