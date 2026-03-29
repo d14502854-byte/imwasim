@@ -6,7 +6,7 @@ type Section = "about" | "skills" | "experience" | "education" | "works" | "blog
 const navItems: { id: Section; icon: typeof User; label: string }[] = [
   { id: "about", icon: User, label: "About" },
   { id: "skills", icon: FileText, label: "Skills" },
-  { id: "experience", icon: Briefcase, label: "Work" },
+  { id: "experience", icon: Briefcase, label: "Exp" },
   { id: "works", icon: FolderOpen, label: "Works" },
   { id: "blog", icon: Newspaper, label: "Blog" },
   { id: "education", icon: GraduationCap, label: "Edu" },
